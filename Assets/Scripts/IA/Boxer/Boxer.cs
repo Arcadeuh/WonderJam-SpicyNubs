@@ -6,17 +6,20 @@ public class Boxer : MonoBehaviour
 {
     [Header("Speed")]
     public float walkSpeed = 2;
-    public float alertSpeed = 5;
+    public float runSpeed = 5;
     [Header("Triggers")]
     public GameObject triggerRight;
     public GameObject triggerLeft;
 
     private bool isWalking = false;
+    private bool isRunningTowardPlayer = false;
+    private bool isFlipped = false;
+    private GameObject playerGameobject;
 
     // Start is called before the first frame update
     void Start()
     {
-            
+        playerGameobject = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -28,9 +31,37 @@ public class Boxer : MonoBehaviour
             triggerLeft.GetComponent<OnTriggers>().GetGameObjectsInside().Count == 0)
             {
                 walkSpeed *= -1;
-                transform.Rotate(0, 180, 0);
+                transform.Find("Body").Rotate(0, 180, 0);
             }
             transform.position = new Vector2(transform.position.x + Time.deltaTime * walkSpeed, transform.position.y);
+        }
+
+        if (isRunningTowardPlayer)
+        {
+            Rigidbody2D rb = GetComponent<Rigidbody2D>();
+            Vector2 target = new Vector2(playerGameobject.transform.position.x, rb.position.y);
+            Vector2 newPos = Vector2.MoveTowards(rb.position, target, runSpeed * Time.deltaTime);
+
+            if (triggerRight.GetComponent<OnTriggers>().GetGameObjectsInside().Count != 0 &&
+                newPos.x - rb.position.x > 0)
+            {
+                transform.position = newPos;
+            }
+            else if (triggerLeft.GetComponent<OnTriggers>().GetGameObjectsInside().Count != 0 &&
+                newPos.x - rb.position.x < 0)
+            {
+                transform.position = newPos;
+            }
+
+            Transform bodyTransform = transform.Find("Body");
+            if (transform.position.x < playerGameobject.transform.position.x) 
+            {
+                bodyTransform.eulerAngles = new Vector3(bodyTransform.position.x, 180, bodyTransform.position.z); 
+            }
+            else
+            {
+                bodyTransform.eulerAngles = new Vector3(bodyTransform.position.x, 0, bodyTransform.position.z);
+            }
         }
     }
 
@@ -39,8 +70,13 @@ public class Boxer : MonoBehaviour
         if (isWalking)
         {
             walkSpeed *= -1;
-            transform.Rotate(0, 180, 0);
+            transform.Find("Body").Rotate(0, 180, 0);
         }
+    }
+
+    public void FlipTowardTarget(Transform transform)
+    {
+
     }
 
     public void Walk()
@@ -49,11 +85,22 @@ public class Boxer : MonoBehaviour
         if (reverseValue == 0) { 
             walkSpeed *= -1;
         }
+        Transform body = transform.Find("Body");
         if (walkSpeed > 0)
-        { transform.eulerAngles = new Vector3(transform.eulerAngles.x, 180, transform.eulerAngles.z); }
+        { body.eulerAngles = new Vector3(body.eulerAngles.x, 180, body.eulerAngles.z); }
         else
-        { transform.eulerAngles = new Vector3(transform.eulerAngles.x, 0, transform.eulerAngles.z); }
+        { body.eulerAngles = new Vector3(body.eulerAngles.x, 0, body.eulerAngles.z); }
         isWalking = true;
+    }
+
+    public void RunTowardPlayer()
+    {
+        isRunningTowardPlayer = true;
+    }
+
+    public void StopRunTowardPlayer()
+    {
+        isRunningTowardPlayer = false;
     }
 
     public void StopWalking()
@@ -61,15 +108,13 @@ public class Boxer : MonoBehaviour
         isWalking = false;  
     }
 
-    public void TurnAround()
+    public Coroutine StartAnyCoroutine(IEnumerator coroutine)
     {
-        //transform.Rotate(0, 180, 0);
-        walkSpeed *= -1;
-        transform.Rotate(0, 180, 0);
+        return StartCoroutine(coroutine);
     }
 
-    public void StartAnyCoroutine(IEnumerator coroutine)
+    public void StopAnyCoroutine(Coroutine coroutine)
     {
-        StartCoroutine(coroutine);
+        StopCoroutine(coroutine);
     }
 }

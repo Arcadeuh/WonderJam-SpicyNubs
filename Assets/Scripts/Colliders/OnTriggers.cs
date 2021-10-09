@@ -10,14 +10,19 @@ public class OnTriggers : MonoBehaviour
     public UnityEvent onTriggerExit;
     public UnityEvent onTriggerEnter;
     [Header("Specific")]
-    public string tagToDetect = "";
+    public string tagToDetect;
     public UnityEvent specificTriggerEnter;
+    public UnityEvent specificTriggerExit;
 
     private List<string> gameObjectsInside = new List<string>();
 
     //~~~~~~Events~~~~~~
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (collision.tag == tagToDetect)
+        {
+            specificTriggerExit.Invoke();
+        }
         onTriggerExit.Invoke();
         gameObjectsInside.Remove(collision.name);
     }
