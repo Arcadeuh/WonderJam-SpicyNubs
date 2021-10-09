@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
+        
         currentHealth -= damage;
         animator.SetTrigger("Hurt");
         if (currentHealth<= 0)
@@ -27,7 +28,7 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        animator.SetBool("IsDead",true) ;
+        animator.SetBool("IsDead", true);
         Debug.Log("Enemy dead");
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
