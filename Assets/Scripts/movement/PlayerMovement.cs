@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isJumping;
     private bool jumpKeyHeld;
     public Animator animator;
+    public LayerMask ground;
 
 
 
@@ -38,12 +39,12 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        
 
-        
+
+
         if (isJumping)
         {
-            if (!jumpKeyHeld && Vector2.Dot(rb.velocity, Vector2.up) > 0)
+            if (!jumpKeyHeld || Vector2.Dot(rb.velocity, Vector2.up) < 0)
             {
                 //Debug.Log("not held" + jumpKeyHeld);
                 rb.AddForce(new Vector2(0, fallingSpeed) * rb.mass);
@@ -80,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isJumping", true);
             //Remove These 2 Lines Below For W&s Movement Only
             isJumping = true;
-            rb.AddForce(new Vector2(0, 1)*jumpForce* rb.mass, ForceMode2D.Impulse);
+            rb.AddForce(new Vector2(0, 2)*jumpForce* rb.mass, ForceMode2D.Impulse);
             IsGrounded = false;
             //Debug.Log(jumpForce);
         }
@@ -107,10 +108,16 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }*/
-    public void OnTriggerEnter2D()
+    public void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log(collision.gameObject.layer);
         //Debug.Log(circular.isTrigger);
+        if (collision.gameObject.layer == 3)
+        {
+
         IsGrounded = true;
+        isJumping = false;
         animator.SetBool("isJumping", false);
+        }
     }
 }
