@@ -43,11 +43,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        //Debug.Log(IsGrounded);
-        if (Input.GetButtonDown("Jump"))
-        {
-            Debug.Log("test");
-        }
+        Debug.Log(IsGrounded);
         if (Input.GetButtonDown("Jump") && IsGrounded)
         {
             //Remove These 2 Lines Below For W&s Movement Only

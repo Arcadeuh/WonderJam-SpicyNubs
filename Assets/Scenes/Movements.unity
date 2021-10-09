@@ -269,7 +269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1426452333}
-  circular: {fileID: 0}
+  circular: {fileID: 1426452335}
 --- !u!58 &1426452335
 CircleCollider2D:
   m_ObjectHideFlags: 0
