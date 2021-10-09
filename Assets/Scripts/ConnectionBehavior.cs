@@ -42,6 +42,7 @@ public class ConnectionBehavior: MonoBehaviour
     {
         Collider2D[] hitantenne = Physics2D.OverlapCircleAll(playerPoint.position, ConnectionRange, antenneLayers);
         int isAntenneHere = hitantenne.Length;
+        Debug.Log(isAntenneHere);
         if (isAntenneHere == 1)
         {
             if (currentConnection < 100)

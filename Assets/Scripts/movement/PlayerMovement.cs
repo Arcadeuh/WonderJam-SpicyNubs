@@ -110,6 +110,13 @@ public class PlayerMovement : MonoBehaviour
     {
         //Debug.Log(circular.isTrigger);
         //OnGroundTouched();
+        /*Debug.Log(collision.gameObject.layer);
+        if (collision.gameObject.layer == 3 )
+        {
+            IsGrounded = true;
+            isJumping = false;
+            animator.SetBool("isJumping", false);
+        }*/
     }
     
     public void SetEnableMovement(bool value)
