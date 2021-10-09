@@ -140,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2007650665901670683, guid: 61445c4138d05f6499019f54eba2701f, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2007650665901670683, guid: 61445c4138d05f6499019f54eba2701f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -339,7 +339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6944690637135966557, guid: ed864eba824f7a34681555222a501918, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6944690637135966557, guid: ed864eba824f7a34681555222a501918, type: 3}
       propertyPath: m_LocalPosition.x
@@ -387,7 +387,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6944690637448703310, guid: ed864eba824f7a34681555222a501918, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6944690637448703311, guid: ed864eba824f7a34681555222a501918, type: 3}
       propertyPath: m_LocalScale.x
@@ -396,6 +396,10 @@ PrefabInstance:
     - target: {fileID: 6944690637448703311, guid: ed864eba824f7a34681555222a501918, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944690638271891401, guid: ed864eba824f7a34681555222a501918, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.24
       objectReference: {fileID: 0}
     - target: {fileID: 6944690638571450816, guid: ed864eba824f7a34681555222a501918, type: 3}
       propertyPath: m_LocalPosition.x
@@ -461,7 +465,8 @@ PrefabInstance:
       propertyPath: specificTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6944690637448703345, guid: ed864eba824f7a34681555222a501918, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ed864eba824f7a34681555222a501918, type: 3}
 --- !u!1 &1630609416
 GameObject:
