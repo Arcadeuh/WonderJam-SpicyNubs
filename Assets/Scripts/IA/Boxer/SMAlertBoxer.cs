@@ -8,7 +8,7 @@ public class SMAlertBoxer : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.GetComponent<Boxer>().RunTowardPlayer();
+        animator.GetComponent<BoxerBehaviour>().RunTowardPlayer();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -20,7 +20,7 @@ public class SMAlertBoxer : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.GetComponent<Boxer>().StopRunTowardPlayer();
+        animator.GetComponent<BoxerBehaviour>().StopRunTowardPlayer();
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
