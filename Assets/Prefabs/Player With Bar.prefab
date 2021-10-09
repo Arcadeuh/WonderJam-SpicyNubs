@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 512840348230634916, guid: 61445c4138d05f6499019f54eba2701f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1275731570465209262, guid: 61445c4138d05f6499019f54eba2701f, type: 3}
       propertyPath: m_Name
       value: Player With Bar
@@ -55,12 +59,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4849010393266938646, guid: 61445c4138d05f6499019f54eba2701f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.892
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849010393266938646, guid: 61445c4138d05f6499019f54eba2701f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5905706908489306848, guid: 61445c4138d05f6499019f54eba2701f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5905706908489306848, guid: 61445c4138d05f6499019f54eba2701f, type: 3}
+      propertyPath: attackRange
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6269211092413029060, guid: 61445c4138d05f6499019f54eba2701f, type: 3}
       propertyPath: tagToDetect
       value: Plateform
       objectReference: {fileID: 0}
     - target: {fileID: 6269211092413029060, guid: 61445c4138d05f6499019f54eba2701f, type: 3}
+      propertyPath: specificTriggerExit.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6269211092413029060, guid: 61445c4138d05f6499019f54eba2701f, type: 3}
       propertyPath: specificTriggerEnter.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6269211092413029060, guid: 61445c4138d05f6499019f54eba2701f, type: 3}
+      propertyPath: specificTriggerExit.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6269211092413029060, guid: 61445c4138d05f6499019f54eba2701f, type: 3}
@@ -68,29 +96,61 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6269211092413029060, guid: 61445c4138d05f6499019f54eba2701f, type: 3}
+      propertyPath: specificTriggerExit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 9005718606849380544}
+    - target: {fileID: 6269211092413029060, guid: 61445c4138d05f6499019f54eba2701f, type: 3}
       propertyPath: specificTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 9005718606849380544}
     - target: {fileID: 6269211092413029060, guid: 61445c4138d05f6499019f54eba2701f, type: 3}
+      propertyPath: specificTriggerExit.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6269211092413029060, guid: 61445c4138d05f6499019f54eba2701f, type: 3}
       propertyPath: specificTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6269211092413029060, guid: 61445c4138d05f6499019f54eba2701f, type: 3}
+      propertyPath: specificTriggerExit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnGroundExit
       objectReference: {fileID: 0}
     - target: {fileID: 6269211092413029060, guid: 61445c4138d05f6499019f54eba2701f, type: 3}
       propertyPath: specificTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnGroundTouched
       objectReference: {fileID: 0}
     - target: {fileID: 6269211092413029060, guid: 61445c4138d05f6499019f54eba2701f, type: 3}
+      propertyPath: specificTriggerExit.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerMovement, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6269211092413029060, guid: 61445c4138d05f6499019f54eba2701f, type: 3}
       propertyPath: specificTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: PlayerMovement, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6269211092413029060, guid: 61445c4138d05f6499019f54eba2701f, type: 3}
+      propertyPath: specificTriggerExit.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6269211092413029060, guid: 61445c4138d05f6499019f54eba2701f, type: 3}
       propertyPath: specificTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7031788087141721035, guid: 61445c4138d05f6499019f54eba2701f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7031788087141721035, guid: 61445c4138d05f6499019f54eba2701f, type: 3}
       propertyPath: connectionBar
       value: 
       objectReference: {fileID: 1234059372029762625}
+    - target: {fileID: 7031788087141721035, guid: 61445c4138d05f6499019f54eba2701f, type: 3}
+      propertyPath: ConnectionRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7915919868917415564, guid: 61445c4138d05f6499019f54eba2701f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7915919868917415564, guid: 61445c4138d05f6499019f54eba2701f, type: 3}
       propertyPath: jumpHeight
       value: 3

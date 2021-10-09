@@ -39,9 +39,9 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         
-        if (isJumping)
+        if (!IsGrounded)
         {
-            if (!jumpKeyHeld || Vector2.Dot(rb.velocity, Vector2.up) < 0)
+            if (!jumpKeyHeld || Vector2.Dot(rb.velocity, Vector2.up) < -0.5f)
             {
                 //Debug.Log("not held" + jumpKeyHeld);
                 rb.AddForce(new Vector2(0, fallingSpeed) * rb.mass);
@@ -67,13 +67,18 @@ public class PlayerMovement : MonoBehaviour
         //Debug.Log(Mathf.Abs(rb.velocity.x));
         animator.SetBool("isRunning", MoveX!=0);
         //Remove The Slashes For W&S Movement Only
-        
-        
+
+
 
         //rb.velocity = (new Vector2(MoveX * 20, MoveY * 20));
         //Debug.Log(IsGrounded);
-       
-        if (Input.GetButtonDown("Jump") && IsGrounded)
+/*
+           if (Vector2.Dot(rb.velocity, Vector2.up) < 0.1f)
+        {
+            
+            animator.SetBool("isJumping", true);
+        }*/
+        if ((Input.GetButtonDown("Jump") && IsGrounded))
         {
             jumpKeyHeld = true;
             animator.SetBool("isJumping", true);
@@ -128,6 +133,15 @@ public class PlayerMovement : MonoBehaviour
     {
         IsGrounded = true;
         isJumping = false;
+        Debug.Log(IsGrounded);
         animator.SetBool("isJumping", false);
         }
+
+    public void OnGroundExit()
+    {
+        IsGrounded = false;
+        isJumping = false;
+        Debug.Log(IsGrounded);
+        animator.SetBool("isJumping", true);
     }
+}

@@ -64,8 +64,8 @@ public class PlayerCombatScript : MonoBehaviour
             }
         }
         if(enemySelected.transform.position.x > transform.position.x) 
-        { rb.AddForce(new Vector2(-20.0f, 10.0f) * rb.mass, ForceMode2D.Impulse); }
-        else { rb.AddForce(new Vector2(20.0f, 10.0f) * rb.mass, ForceMode2D.Impulse); }
+        { rb.AddForce(new Vector2(-20.0f, 15.0f) * rb.mass, ForceMode2D.Impulse); }
+        else { rb.AddForce(new Vector2(20.0f, 15.0f) * rb.mass, ForceMode2D.Impulse); }
     }
 
     private void OnDrawGizmosSelected()
