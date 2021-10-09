@@ -654,7 +654,7 @@ GameObject:
   - component: {fileID: 1219757708}
   - component: {fileID: 1219757707}
   - component: {fileID: 1219757706}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -908,6 +908,7 @@ MonoBehaviour:
   rb: {fileID: 1426452333}
   circular: {fileID: 1426452335}
   animator: {fileID: 1426452337}
+  enableMovement: 1
 --- !u!58 &1426452335
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -944,6 +945,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   attackRate: 2
+  health: 100
 --- !u!95 &1426452337
 Animator:
   serializedVersion: 3
@@ -995,7 +997,7 @@ GameObject:
   - component: {fileID: 1496458190}
   - component: {fileID: 1496458189}
   - component: {fileID: 1496458191}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}

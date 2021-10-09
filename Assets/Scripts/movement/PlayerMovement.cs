@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isJumping;
     private bool jumpKeyHeld;
     public Animator animator;
+    public bool enableMovement= true;
 
 
     //private float MoveY;
@@ -123,4 +124,3 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("isJumping", false);
         }
     }
-}
