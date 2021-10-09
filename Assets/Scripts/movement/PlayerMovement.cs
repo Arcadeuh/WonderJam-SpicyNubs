@@ -18,8 +18,6 @@ public class PlayerMovement : MonoBehaviour
     private bool isJumping;
     private bool jumpKeyHeld;
     public Animator animator;
-    public LayerMask ground;
-
 
 
     //private float MoveY;
@@ -39,9 +37,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-
-
-
+        
         if (isJumping)
         {
             if (!jumpKeyHeld || Vector2.Dot(rb.velocity, Vector2.up) < 0)
@@ -55,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
+        if (!enableMovement) { return; }
         MoveX = Input.GetAxisRaw("Horizontal");
         //Remove The Slashes For W & S Movement Only
         //MoveY = Input.GetAxisRaw("Vertical");
@@ -67,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = new Vector3(-1, 1, 1);
         //animator
         //Debug.Log(Mathf.Abs(rb.velocity.x));
-        animator.SetBool("isRunning", Mathf.Abs(rb.velocity.x)!=0);
+        animator.SetBool("isRunning", MoveX!=0);
         //Remove The Slashes For W&S Movement Only
         
         
@@ -110,11 +107,17 @@ public class PlayerMovement : MonoBehaviour
     }*/
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.gameObject.layer);
         //Debug.Log(circular.isTrigger);
-        if (collision.gameObject.layer == 3)
-        {
+        //OnGroundTouched();
+    }
+    
+    public void SetEnableMovement(bool value)
+    {
+        this.enableMovement = value;
+    }
 
+    public void OnGroundTouched()
+    {
         IsGrounded = true;
         isJumping = false;
         animator.SetBool("isJumping", false);

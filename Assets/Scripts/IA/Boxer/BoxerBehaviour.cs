@@ -36,32 +36,37 @@ public class BoxerBehaviour : MonoBehaviour
             transform.position = new Vector2(transform.position.x + Time.deltaTime * walkSpeed, transform.position.y);
         }
 
-        if (isRunningTowardPlayer)
+        else if (isRunningTowardPlayer)
         {
             Rigidbody2D rb = GetComponent<Rigidbody2D>();
             Vector2 target = new Vector2(playerGameobject.transform.position.x, rb.position.y);
             Vector2 newPos = Vector2.MoveTowards(rb.position, target, runSpeed * Time.deltaTime);
 
-            if (triggerRight.GetComponent<OnTriggers>().GetGameObjectsInside().Count != 0 &&
-                newPos.x - rb.position.x > 0)
+            List<string> gameObjectsRightTrigger = triggerRight.GetComponent<OnTriggers>().GetGameObjectsInside();
+            List<string> gameObjectsLeftTrigger = triggerLeft.GetComponent<OnTriggers>().GetGameObjectsInside();
+            if (gameObjectsRightTrigger.Count != 0 &&
+                newPos.x - rb.position.x > 0 &&
+                !gameObjectsRightTrigger.Contains("Player"))
             {
                 transform.position = newPos;
             }
-            else if (triggerLeft.GetComponent<OnTriggers>().GetGameObjectsInside().Count != 0 &&
-                newPos.x - rb.position.x < 0)
+            else if (gameObjectsLeftTrigger.Count != 0 &&
+                newPos.x - rb.position.x < 0 &&
+                !gameObjectsRightTrigger.Contains("Player"))
             {
                 transform.position = newPos;
             }
 
             Transform bodyTransform = transform.Find("Body");
             if (transform.position.x < playerGameobject.transform.position.x) 
-            {
-                bodyTransform.eulerAngles = new Vector3(bodyTransform.position.x, 180, bodyTransform.position.z); 
-            }
+            { bodyTransform.eulerAngles = new Vector3(bodyTransform.position.x, 180, bodyTransform.position.z); }
             else
-            {
-                bodyTransform.eulerAngles = new Vector3(bodyTransform.position.x, 0, bodyTransform.position.z);
-            }
+            { bodyTransform.eulerAngles = new Vector3(bodyTransform.position.x, 0, bodyTransform.position.z); }
+        }
+
+        else
+        {
+            GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
         }
     }
 
@@ -72,11 +77,6 @@ public class BoxerBehaviour : MonoBehaviour
             walkSpeed *= -1;
             transform.Find("Body").Rotate(0, 180, 0);
         }
-    }
-
-    public void FlipTowardTarget(Transform transform)
-    {
-
     }
 
     public void Walk()
