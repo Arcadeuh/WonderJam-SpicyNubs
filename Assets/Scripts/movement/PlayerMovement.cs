@@ -113,6 +113,8 @@ public class PlayerMovement : MonoBehaviour
     {
         //Debug.Log(circular.isTrigger);
         OnGroundTouched();
+
+        
     }
     
 
