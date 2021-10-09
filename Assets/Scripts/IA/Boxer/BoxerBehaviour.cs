@@ -42,13 +42,17 @@ public class BoxerBehaviour : MonoBehaviour
             Vector2 target = new Vector2(playerGameobject.transform.position.x, rb.position.y);
             Vector2 newPos = Vector2.MoveTowards(rb.position, target, runSpeed * Time.deltaTime);
 
-            if (triggerRight.GetComponent<OnTriggers>().GetGameObjectsInside().Count != 0 &&
-                newPos.x - rb.position.x > 0)
+            List<string> gameObjectsRightTrigger = triggerRight.GetComponent<OnTriggers>().GetGameObjectsInside();
+            List<string> gameObjectsLeftTrigger = triggerLeft.GetComponent<OnTriggers>().GetGameObjectsInside();
+            if (gameObjectsRightTrigger.Count != 0 &&
+                newPos.x - rb.position.x > 0 &&
+                !gameObjectsRightTrigger.Contains("Player"))
             {
                 transform.position = newPos;
             }
-            else if (triggerLeft.GetComponent<OnTriggers>().GetGameObjectsInside().Count != 0 &&
-                newPos.x - rb.position.x < 0)
+            else if (gameObjectsLeftTrigger.Count != 0 &&
+                newPos.x - rb.position.x < 0 &&
+                !gameObjectsRightTrigger.Contains("Player"))
             {
                 transform.position = newPos;
             }
