@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isJumping;
     private bool jumpKeyHeld;
     public Animator animator;
+    
 
 
 
@@ -114,13 +115,25 @@ public class PlayerMovement : MonoBehaviour
         //Debug.Log(circular.isTrigger);
         OnGroundTouched();
 
-        
-    }
-    
+        if (collider.gameObject.CompareTag("MovingPlatform") && isJumping)
+        {
+            isJumping = false;
+            transform.parent = collider.gameObject.transform;
+        }
 
+    }
     public void OnGroundTouched()
     {
         IsGrounded = true;
         animator.SetBool("isJumping", false);
+    }
+
+    public void OnTriggerExit2D(Collider2D collider)
+    {
+        if (collider.gameObject.CompareTag("MovingPlatform") )
+        {
+            transform.parent = null;
+        }
+
     }
 }
