@@ -112,7 +112,7 @@ public class PlayerMovement : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D collider)
     {
         //Debug.Log(circular.isTrigger);
-        OnGroundTouched();
+        //OnGroundTouched();
     }
     
 
