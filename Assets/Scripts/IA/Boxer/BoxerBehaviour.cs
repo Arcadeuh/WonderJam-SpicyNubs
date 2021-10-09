@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Boxer : MonoBehaviour
+public class BoxerBehaviour : MonoBehaviour
 {
     [Header("Speed")]
     public float walkSpeed = 2;

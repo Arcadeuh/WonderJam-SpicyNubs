@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Goomba : MonoBehaviour
+public class GoombaBehaviour : MonoBehaviour
 {
 
     public float speed = 10;
