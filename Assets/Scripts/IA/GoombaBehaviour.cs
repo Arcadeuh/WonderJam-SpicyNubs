@@ -23,6 +23,7 @@ public class GoombaBehaviour : MonoBehaviour
             else
             { transform.eulerAngles = new Vector3(transform.eulerAngles.x, 0, transform.eulerAngles.z); }
         }
+        GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         transform.position = new Vector2(transform.position.x + Time.deltaTime * speed, transform.position.y);
     }
 

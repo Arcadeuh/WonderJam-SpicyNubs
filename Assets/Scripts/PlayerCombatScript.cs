@@ -51,6 +51,21 @@ public class PlayerCombatScript : MonoBehaviour
         health -= healthLose;
         animator.SetTrigger("Stun");
         Debug.Log(health);
+
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        float lowestDistance = float.PositiveInfinity;
+        GameObject enemySelected = null;
+        foreach(GameObject enemy in enemies)
+        {
+            if(enemy.transform.position.sqrMagnitude < lowestDistance)
+            {
+                lowestDistance = enemy.transform.position.sqrMagnitude;
+                enemySelected = enemy;
+            }
+        }
+        if(enemySelected.transform.position.x > transform.position.x) 
+        { rb.AddForce(new Vector2(-20.0f, 10.0f) * rb.mass, ForceMode2D.Impulse); }
+        else { rb.AddForce(new Vector2(20.0f, 10.0f) * rb.mass, ForceMode2D.Impulse); }
     }
 
     private void OnDrawGizmosSelected()
@@ -67,6 +82,7 @@ public class PlayerCombatScript : MonoBehaviour
         if(collision.collider.tag == "Enemy")
         {
             GetHit(10);
+            /*
             if(transform.position.x > collision.transform.position.x)
             {
                 rb.AddForce(new Vector2(20.0f, 10.0f) * rb.mass, ForceMode2D.Impulse);
@@ -75,6 +91,7 @@ public class PlayerCombatScript : MonoBehaviour
             {
                 rb.AddForce(new Vector2(-20.0f, 10.0f) * rb.mass, ForceMode2D.Impulse);
             }
+            */
         }
     }
 }
