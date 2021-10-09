@@ -11,7 +11,7 @@ public class Connexion : MonoBehaviour
     public float ConnectionRange = 0.5f;
     public LayerMask antenneLayers;
 
-    public float ConnectionRate = 1f;
+    public float ConnectionRate =   1f;
     float nextConnectionTime = 0f;
     // Update is called once per frame
     void Update()
