@@ -5,6 +5,7 @@ using UnityEngine;
 public class SMIdleBoxer : StateMachineBehaviour
 {
     Animator animator;
+    private Coroutine waitCoroutine;
 
     IEnumerator Wait()
     {
@@ -18,7 +19,7 @@ public class SMIdleBoxer : StateMachineBehaviour
     {
         if(!this.animator) this.animator = animator;
         Boxer boxer = animator.gameObject.GetComponent<Boxer>();
-        boxer.StartAnyCoroutine(Wait());
+        waitCoroutine = boxer.StartAnyCoroutine(Wait());
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -30,7 +31,8 @@ public class SMIdleBoxer : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
+        Boxer boxer = animator.gameObject.GetComponent<Boxer>();
+        boxer.StopAnyCoroutine(waitCoroutine);
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

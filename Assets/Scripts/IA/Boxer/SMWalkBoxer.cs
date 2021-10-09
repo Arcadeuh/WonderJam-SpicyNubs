@@ -5,6 +5,7 @@ using UnityEngine;
 public class SMWalkBoxer : StateMachineBehaviour
 {
     private Boxer boxer;
+    private Coroutine waitCoroutine;
     Animator animator;
 
     IEnumerator Wait()
@@ -20,7 +21,7 @@ public class SMWalkBoxer : StateMachineBehaviour
         if(!this.animator) this.animator = animator; 
         if(!this.boxer) boxer = animator.gameObject.GetComponent<Boxer>();
         boxer.Walk();
-        boxer.StartAnyCoroutine(Wait());
+        waitCoroutine = boxer.StartAnyCoroutine(Wait());
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -32,6 +33,7 @@ public class SMWalkBoxer : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        boxer.StopAnyCoroutine(waitCoroutine);
         boxer.StopWalking();
     }
 
