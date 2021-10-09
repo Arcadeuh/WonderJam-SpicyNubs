@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     //To Jump Movement Only Also In RigidBody2D Remove Gravity For It
 
     public float jumpHeight = 1.0f;
+    public float speed = 1.0f;
+    public float fallingSpeed = -100.0f;
     public Rigidbody2D rb;
     public CircleCollider2D circular;
     private bool IsGrounded = true;
@@ -16,9 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isJumping;
     private bool jumpKeyHeld;
     public Animator animator;
-    private bool attacking;
-    public float attackTime;
-    private float attackTimeCounter;
+
 
 
     //private float MoveY;
@@ -46,8 +46,7 @@ public class PlayerMovement : MonoBehaviour
             if (!jumpKeyHeld && Vector2.Dot(rb.velocity, Vector2.up) > 0)
             {
                 //Debug.Log("not held" + jumpKeyHeld);
-                //Debug.Log("test");
-                rb.AddForce(new Vector2(0,-500)* rb.mass);
+                rb.AddForce(new Vector2(0, fallingSpeed) * rb.mass);
             }
 
         }
@@ -60,49 +59,37 @@ public class PlayerMovement : MonoBehaviour
         //MoveY = Input.GetAxisRaw("Vertical");
         //Slash The Below Line Out For W&S Movement Only
 
-        rb.AddForce(new Vector2(MoveX * 100 * rb.mass, 0));
-
+        rb.AddForce(new Vector2(MoveX * speed * rb.mass, 0));
+        if (rb.velocity.x > 0.01f)
+            transform.localScale = Vector3.one;
+        else if (rb.velocity.x < -0.01f)
+            transform.localScale = new Vector3(-1, 1, 1);
         //animator
-        animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
+        Debug.Log(Mathf.Abs(rb.velocity.x));
+        animator.SetBool("isRunning", Mathf.Abs(rb.velocity.x)!=0);
         //Remove The Slashes For W&S Movement Only
-        if (!attacking)
-        {
+        
+        
 
         //rb.velocity = (new Vector2(MoveX * 20, MoveY * 20));
         //Debug.Log(IsGrounded);
-        if (Input.GetButtonDown("Attack"))
-        {
-            attackTimeCounter = attackTime;
-                attacking = true;
-            animator.SetBool("Attack", true);
-            rb.velocity = Vector2.zero;
-            
-        }
+       
         if (Input.GetButtonDown("Jump") && IsGrounded)
         {
             jumpKeyHeld = true;
             animator.SetBool("isJumping", true);
             //Remove These 2 Lines Below For W&s Movement Only
             isJumping = true;
-            rb.AddForce(new Vector2(0, 10)*jumpForce* rb.mass, ForceMode2D.Impulse);
+            rb.AddForce(new Vector2(0, 1)*jumpForce* rb.mass, ForceMode2D.Impulse);
             IsGrounded = false;
+            Debug.Log(jumpForce);
         }
         else if (Input.GetButtonUp("Jump"))
         {
             jumpKeyHeld = false;
         }
-        }
-        if (attackTimeCounter >= 0)
-        {
-            attackTimeCounter -= Time.deltaTime;
-            Debug.Log(attackTimeCounter);
-        }
-        if (attackTimeCounter <= 0)
-        {
-            attacking = false;
-            animator.SetBool("Attack", false);
-
-        }
+        
+        
     }
 
     /*public void OnTriggerEnter2D(Collider2D ob)
