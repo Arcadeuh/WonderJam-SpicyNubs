@@ -240,7 +240,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7915919868917415564, guid: 61445c4138d05f6499019f54eba2701f, type: 3}
       propertyPath: speed
-      value: 20
+      value: 20.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 7915919868917415564, guid: 61445c4138d05f6499019f54eba2701f, type: 3}
+      propertyPath: fallingSpeed
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 8492111433190774340, guid: 61445c4138d05f6499019f54eba2701f, type: 3}
       propertyPath: m_WasSpriteAssigned

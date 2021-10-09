@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isJumping;
     private bool jumpKeyHeld;
     public Animator animator;
-    private bool enableMovement = true;
+    public bool enableMovement= true;
 
 
     //private float MoveY;
@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
         
         if (isJumping)
         {
-            if (!jumpKeyHeld && Vector2.Dot(rb.velocity, Vector2.up) > 0)
+            if (!jumpKeyHeld || Vector2.Dot(rb.velocity, Vector2.up) < 0)
             {
                 //Debug.Log("not held" + jumpKeyHeld);
                 rb.AddForce(new Vector2(0, fallingSpeed) * rb.mass);
@@ -79,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isJumping", true);
             //Remove These 2 Lines Below For W&s Movement Only
             isJumping = true;
-            rb.AddForce(new Vector2(0, 1)*jumpForce* rb.mass, ForceMode2D.Impulse);
+            rb.AddForce(new Vector2(0, 2)*jumpForce* rb.mass, ForceMode2D.Impulse);
             IsGrounded = false;
             //Debug.Log(jumpForce);
         }
@@ -106,13 +106,18 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }*/
-
-    
-    public void OnTriggerEnter2D(Collider2D collider)
+    /*public void OnTriggerEnter2D(Collider2D collision)
     {
         //Debug.Log(circular.isTrigger);
         //OnGroundTouched();
-    }
+        Debug.Log(collision.gameObject.layer);
+        if (collision.gameObject.layer == 3 )
+        {
+            IsGrounded = true;
+            isJumping = false;
+            animator.SetBool("isJumping", false);
+        }
+    }*/
     
     public void SetEnableMovement(bool value)
     {
@@ -122,6 +127,7 @@ public class PlayerMovement : MonoBehaviour
     public void OnGroundTouched()
     {
         IsGrounded = true;
+        isJumping = false;
         animator.SetBool("isJumping", false);
+        }
     }
-}
