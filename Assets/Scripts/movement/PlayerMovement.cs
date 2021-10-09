@@ -60,9 +60,13 @@ public class PlayerMovement : MonoBehaviour
         //Slash The Below Line Out For W&S Movement Only
 
         rb.AddForce(new Vector2(MoveX * speed * rb.mass, 0));
-
+        if (rb.velocity.x > 0.01f)
+            transform.localScale = Vector3.one;
+        else if (rb.velocity.x < -0.01f)
+            transform.localScale = new Vector3(-1, 1, 1);
         //animator
-        animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
+        Debug.Log(Mathf.Abs(rb.velocity.x));
+        animator.SetBool("isRunning", Mathf.Abs(rb.velocity.x)!=0);
         //Remove The Slashes For W&S Movement Only
         
         
