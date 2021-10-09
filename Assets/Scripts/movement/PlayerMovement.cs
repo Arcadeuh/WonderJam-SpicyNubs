@@ -123,7 +123,20 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isJumping", false);
         }
     }*/
-    
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        //Debug.Log(circular.isTrigger);
+        //OnGroundTouched();
+        Debug.Log(collision.gameObject.layer);
+        
+         if (collision.gameObject.layer == 3)
+        {
+            IsGrounded = false;
+            isJumping = false;
+            animator.SetBool("isJumping", true);
+        }
+    }
+
     public void SetEnableMovement(bool value)
     {
         this.enableMovement = value;
