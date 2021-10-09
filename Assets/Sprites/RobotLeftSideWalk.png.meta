@@ -1,7 +1,31 @@
 fileFormatVersion: 2
 guid: d030c2df6f64c8046a722e11914f4f71
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -299501287843581119
+    second: RobotLeftSideWalk_0
+  - first:
+      213: -8996748220161829681
+    second: RobotLeftSideWalk_1
+  - first:
+      213: -5401888563949018770
+    second: RobotLeftSideWalk_2
+  - first:
+      213: -8719118974664250604
+    second: RobotLeftSideWalk_3
+  - first:
+      213: -2731964032148840511
+    second: RobotLeftSideWalk_4
+  - first:
+      213: -1276936153778048558
+    second: RobotLeftSideWalk_5
+  - first:
+      213: 8798856504169046026
+    second: RobotLeftSideWalk_6
+  - first:
+      213: 551658172708812858
+    second: RobotLeftSideWalk_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,12 +65,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,9 +99,189 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: RobotLeftSideWalk_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 21
+        width: 35
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 143bf406a25f7dbf0800000000000000
+      internalID: -299501287843581119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RobotLeftSideWalk_1
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 20
+        width: 34
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc450ab1921252380800000000000000
+      internalID: -8996748220161829681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RobotLeftSideWalk_2
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 20
+        width: 40
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e61e295b8f2a805b0800000000000000
+      internalID: -5401888563949018770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RobotLeftSideWalk_3
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 19
+        width: 35
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41be4c80d777ff680800000000000000
+      internalID: -8719118974664250604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RobotLeftSideWalk_4
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 19
+        width: 35
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cfdf94ff2d161ad0800000000000000
+      internalID: -2731964032148840511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RobotLeftSideWalk_5
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 19
+        width: 33
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d1b4396559674ee0800000000000000
+      internalID: -1276936153778048558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RobotLeftSideWalk_6
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 17
+        width: 33
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a00a1a84f51db1a70800000000000000
+      internalID: 8798856504169046026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RobotLeftSideWalk_7
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 17
+        width: 33
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a38ffbd6f22e7a700800000000000000
+      internalID: 551658172708812858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
