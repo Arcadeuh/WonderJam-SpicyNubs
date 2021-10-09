@@ -1,25 +1,31 @@
 fileFormatVersion: 2
-guid: ab4fcceb1fa26664aabc36f8fbe01e62
+guid: d5e06af21442c304b8fe1f6fa41f8848
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4108333124764306383
-    second: RobotIdle_0
+      213: 3333519553364820122
+    second: EnemyWalk_0
   - first:
-      213: 5618838666857993717
-    second: RobotIdle_1
+      213: 5397656243092601031
+    second: EnemyWalk_1
   - first:
-      213: 8637000601859376473
-    second: RobotIdle_2
+      213: -2061383542819475063
+    second: EnemyWalk_2
   - first:
-      213: 8482484221167195235
-    second: RobotIdle_3
+      213: -886456225449863607
+    second: EnemyWalk_3
   - first:
-      213: 535122695272812825
-    second: RobotIdle_4
+      213: -8942450185556836452
+    second: EnemyWalk_4
   - first:
-      213: -4543481905214882903
-    second: RobotIdle_5
+      213: 7887131161206726974
+    second: EnemyWalk_5
+  - first:
+      213: 5475783735209303024
+    second: EnemyWalk_6
+  - first:
+      213: -4638906021341026798
+    second: EnemyWalk_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -50,7 +56,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -109,13 +115,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RobotIdle_0
+      name: EnemyWalk_0
       rect:
         serializedVersion: 2
-        x: 27
-        y: 20
-        width: 35
-        height: 62
+        x: 0
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,20 +129,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 134f3773ac44cf6c0800000000000000
-      internalID: -4108333124764306383
+      spriteID: a90012e3f5a034e20800000000000000
+      internalID: 3333519553364820122
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotIdle_1
+      name: EnemyWalk_1
       rect:
         serializedVersion: 2
-        x: 123
-        y: 20
-        width: 35
-        height: 62
+        x: 96
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f5dc446fff1afd40800000000000000
-      internalID: 5618838666857993717
+      spriteID: 7c8343d41c358ea40800000000000000
+      internalID: 5397656243092601031
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotIdle_2
+      name: EnemyWalk_2
       rect:
         serializedVersion: 2
-        x: 219
-        y: 21
-        width: 35
-        height: 61
+        x: 192
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 955c9ae594accd770800000000000000
-      internalID: 8637000601859376473
+      spriteID: 981b868e69e7463e0800000000000000
+      internalID: -2061383542819475063
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotIdle_3
+      name: EnemyWalk_3
       rect:
         serializedVersion: 2
-        x: 315
-        y: 21
-        width: 35
-        height: 61
+        x: 288
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,20 +192,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 364d68ff476d7b570800000000000000
-      internalID: 8482484221167195235
+      spriteID: 946902572cca2b3f0800000000000000
+      internalID: -886456225449863607
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotIdle_4
+      name: EnemyWalk_4
       rect:
         serializedVersion: 2
-        x: 411
-        y: 20
-        width: 35
-        height: 62
+        x: 384
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,20 +213,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9115cf291432d6700800000000000000
-      internalID: 535122695272812825
+      spriteID: c9f32447fe806e380800000000000000
+      internalID: -8942450185556836452
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotIdle_5
+      name: EnemyWalk_5
       rect:
         serializedVersion: 2
-        x: 507
-        y: 20
-        width: 35
-        height: 62
+        x: 480
+        y: 0
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,8 +234,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ab7044974f42f0c0800000000000000
-      internalID: -4543481905214882903
+      spriteID: e3124a8d008b47d60800000000000000
+      internalID: 7887131161206726974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyWalk_6
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fb13049b44edfb40800000000000000
+      internalID: 5475783735209303024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyWalk_7
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2162c833d8b4f9fb0800000000000000
+      internalID: -4638906021341026798
       vertices: []
       indices: 
       edges: []

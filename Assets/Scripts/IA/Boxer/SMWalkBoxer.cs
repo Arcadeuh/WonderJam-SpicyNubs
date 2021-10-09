@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SMWalkBoxer : StateMachineBehaviour
 {
-    private Boxer boxer;
+    private BoxerBehaviour boxer;
     private Coroutine waitCoroutine;
     Animator animator;
 
@@ -19,7 +19,7 @@ public class SMWalkBoxer : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         if(!this.animator) this.animator = animator; 
-        if(!this.boxer) boxer = animator.gameObject.GetComponent<Boxer>();
+        if(!this.boxer) boxer = animator.gameObject.GetComponent<BoxerBehaviour>();
         boxer.Walk();
         waitCoroutine = boxer.StartAnyCoroutine(Wait());
     }
