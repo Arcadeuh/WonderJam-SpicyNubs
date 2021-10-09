@@ -65,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
         else if (rb.velocity.x < -0.01f)
             transform.localScale = new Vector3(-1, 1, 1);
         //animator
-        Debug.Log(Mathf.Abs(rb.velocity.x));
+        //Debug.Log(Mathf.Abs(rb.velocity.x));
         animator.SetBool("isRunning", Mathf.Abs(rb.velocity.x)!=0);
         //Remove The Slashes For W&S Movement Only
         
@@ -82,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
             isJumping = true;
             rb.AddForce(new Vector2(0, 1)*jumpForce* rb.mass, ForceMode2D.Impulse);
             IsGrounded = false;
-            Debug.Log(jumpForce);
+            //Debug.Log(jumpForce);
         }
         else if (Input.GetButtonUp("Jump"))
         {
