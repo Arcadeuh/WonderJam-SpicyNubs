@@ -28,6 +28,7 @@ public class AntennaCount : MonoBehaviour
         {
             onAntennasRepaired.Invoke();
             flag = true;
+            textUI.text = "0";
             return;
         }
 
