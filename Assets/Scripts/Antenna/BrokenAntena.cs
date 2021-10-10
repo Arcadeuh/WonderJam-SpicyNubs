@@ -30,9 +30,9 @@ public class BrokenAntena : AntenneState
         sr.sprite = damaged;
     }
 
-    // Update is called once per frame
-    void Update()
+    
+    public bool GetIsRepaired()
     {
-        
+        return isRepaired;  
     }
 }
