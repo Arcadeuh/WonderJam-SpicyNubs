@@ -199,8 +199,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 2
   runSpeed: 4
-  triggerBottomRight: {fileID: 0}
-  triggerBottomLeft: {fileID: 0}
+  triggerBottomRight: {fileID: 2406497295953577194}
+  triggerBottomLeft: {fileID: 2406497296290023756}
 --- !u!114 &739470810017502987
 MonoBehaviour:
   m_ObjectHideFlags: 0
