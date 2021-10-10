@@ -26,9 +26,9 @@ public class SfxManager : MonoBehaviour
 
     private void Start()
     {
-        Click = Audio.load<AudioClip> ("click_menu_sound");
-        Attack = Audio.GetComponent<AudioClip>("Retor_8-Bitt_Game-Hit_Hurt_Fall_Drop_10");
-        GetHit = Audio.GetComponent<AudioClip>("Retro_8-Bit_Game-Hit_Hurt_Fall_Drop_13");
+     //   Click = Audio.load<AudioClip> ("click_menu_sound");
+      //  Attack = Audio.GetComponent<AudioClip>("Retor_8-Bitt_Game-Hit_Hurt_Fall_Drop_10");
+      //  GetHit = Audio.GetComponent<AudioClip>("Retro_8-Bit_Game-Hit_Hurt_Fall_Drop_13");
         // Jump = Audio.GetComponent<AudioClip>("click_menu_sound");
 
         AudioSrc = GetComponent<AudioSource>();
@@ -39,14 +39,14 @@ public class SfxManager : MonoBehaviour
         switch (clip)
         {
             case "Click":
-                AudioSrc.PlayOneShot(Click);
+    //            AudioSrc.PlayOneShot(Click);
                 break;
 
             case "Attack":
-                AudioSrc.PlayOneShot(Attack);
+      //          AudioSrc.PlayOneShot(Attack);
                 break;
             case " GetHit":
-                AudioSrc.PlayOneShot(GetHit);
+       //         AudioSrc.PlayOneShot(GetHit);
                 break;
             /*case "Jump":
                 AudioSrc.PlayOneShot(Jump);
