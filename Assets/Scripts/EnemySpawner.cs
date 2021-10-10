@@ -18,7 +18,26 @@ public class EnemySpawner : MonoBehaviour
     public bool spawnerDone;
     public GameObject spawnerDoneGameObject;
 
+    void SpawnEnemy()
+    {
+        index = Random.Range(0, spawnPoints.Length);
+        currentPoint = spawnPoints[index];
+        float timeBtwnSpawns = Random.Range(minTimeBtwnSpawns, maxTimeBtwnSpawns);
 
+        if (canSpawn)
+        {
+            Instantiate(enemies[Random.Range(0, enemies.Length)], currentPoint.transform.position, Quaternion.identity);
+            enemiesInLevel++;
+        }
+
+        Invoke("SpawnEnemy", timeBtwnSpawns);
+
+        if (spawnerDone)
+        {
+            //done spawning
+            spawnerDoneGameObject.SetActive(true);
+        }
+    }
 
 
 
@@ -29,7 +48,7 @@ public class EnemySpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Invoke("SpawnEnemy", 0.5f);
     }
 
     // Update is called once per frame
