@@ -16387,16 +16387,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 6876023287244780989, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
---- !u!4 &526201129 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7373749654396286555, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
-  m_PrefabInstance: {fileID: 526201128}
-  m_PrefabAsset: {fileID: 0}
---- !u!20 &526201130 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 1253044592159709727, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
-  m_PrefabInstance: {fileID: 526201128}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &778290011 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8533483438847396371, guid: 2f77c94fa5912db489851bcd2d07d226, type: 3}
@@ -17099,7 +17089,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1171439591}
   - component: {fileID: 1171439593}
-  - component: {fileID: 1171439592}
   - component: {fileID: 1171439594}
   m_Layer: 0
   m_Name: background_sprite_2
@@ -17122,20 +17111,6 @@ Transform:
   m_Father: {fileID: 239902886}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1171439592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1171439590}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e370f79c8f216074fa7f37e0d56b3a3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 526201130}
-  subject: {fileID: 526201129}
 --- !u!212 &1171439593
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17211,7 +17186,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1296847752}
   - component: {fileID: 1296847751}
-  - component: {fileID: 1296847753}
   - component: {fileID: 1296847754}
   m_Layer: 0
   m_Name: background_sprite_1
@@ -17285,20 +17259,6 @@ Transform:
   m_Father: {fileID: 239902886}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1296847753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1296847750}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e370f79c8f216074fa7f37e0d56b3a3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 526201130}
-  subject: {fileID: 526201129}
 --- !u!114 &1296847754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17323,7 +17283,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1390289140}
   - component: {fileID: 1390289139}
-  - component: {fileID: 1390289141}
   - component: {fileID: 1390289142}
   m_Layer: 0
   m_Name: background_sprite_3
@@ -17397,20 +17356,6 @@ Transform:
   m_Father: {fileID: 239902886}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1390289141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1390289138}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e370f79c8f216074fa7f37e0d56b3a3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 526201130}
-  subject: {fileID: 526201129}
 --- !u!114 &1390289142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17602,7 +17547,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1844822134}
   - component: {fileID: 1844822133}
-  - component: {fileID: 1844822132}
   - component: {fileID: 1844822135}
   m_Layer: 0
   m_Name: background_sprite_0
@@ -17611,20 +17555,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1844822132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1844822131}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e370f79c8f216074fa7f37e0d56b3a3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 526201130}
-  subject: {fileID: 526201129}
 --- !u!212 &1844822133
 SpriteRenderer:
   m_ObjectHideFlags: 0
