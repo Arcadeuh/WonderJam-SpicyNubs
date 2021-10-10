@@ -18,7 +18,9 @@ public class SMWalkBoxer : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if(!this.animator) this.animator = animator; 
+        BoxCollider2D bc = animator.transform.Find("Body").Find("SightDetection").GetComponent<BoxCollider2D>();
+        bc.offset = new Vector2(-3.0f, bc.offset.y);
+        if (!this.animator) this.animator = animator; 
         if(!this.boxer) boxer = animator.gameObject.GetComponent<BoxerBehaviour>();
         boxer.Walk();
         waitCoroutine = boxer.StartAnyCoroutine(Wait());
