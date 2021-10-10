@@ -18,6 +18,8 @@ public class SMIdleBoxer : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         if(!this.animator) this.animator = animator;
+        BoxCollider2D bc = animator.transform.Find("Body").Find("SightDetection").GetComponent<BoxCollider2D>();
+        bc.offset = new Vector2(0.0f, bc.offset.y);
         BoxerBehaviour boxer = animator.gameObject.GetComponent<BoxerBehaviour>();
         waitCoroutine = boxer.StartAnyCoroutine(Wait());
     }
