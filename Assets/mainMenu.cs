@@ -12,7 +12,7 @@ public class mainMenu : MonoBehaviour
 
     public void playGame()
     {
-        SceneManager.LoadScene(sceneName:"scene_parallax") ;
+        SceneManager.LoadScene(sceneName:"Niveau1") ;
     }
 
     public void quitGame() {
