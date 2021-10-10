@@ -26,6 +26,11 @@ public class mainMenu : MonoBehaviour
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
+    public void BackToMenu() {
+
+        SceneManager.LoadScene(sceneName: "main_menu");
+    }
+
     IEnumerator LoadLevel(int levelIndex) 
     {
         
