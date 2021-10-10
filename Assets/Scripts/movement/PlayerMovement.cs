@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     public bool enableMovement= true;
 
-    public GameObject interactIcon; //so player can interact and repair antenna
+    //public GameObject interactIcon; //so player can interact and repair antenna
     private Vector2 boxSize = new Vector2(0.1f, 1f);
 
 
@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
         circular = GetComponent<CircleCollider2D>();
         jumpForce = Mathf.Sqrt(2 * Physics2D.gravity.magnitude * jumpHeight);
 
-        interactIcon.SetActive(false);  //to interact with antenna
+        //interactIcon.SetActive(false);  //to interact with antenna
     }
 
     // Update is called once per frame
@@ -115,7 +115,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     //script in relevance with Antenna
-    public void OpenInteractableIcon()
+    /*public void OpenInteractableIcon()
     {
         interactIcon.SetActive(true);
     }
@@ -123,7 +123,7 @@ public class PlayerMovement : MonoBehaviour
     public void CloseInteractableIcon()
     {
         interactIcon.SetActive(false);
-    }
+    }*/
 
     public void CheckInteraction()
     {
