@@ -9,6 +9,9 @@ public class Enemy : MonoBehaviour
     public GameObject enemy;
     int currentHealth;
     Renderer enemyRendered;
+
+    private EnemySpawner EnemySpawning;     //value to have enemy spawn at pt
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +36,14 @@ public class Enemy : MonoBehaviour
         this.enabled = false;
         GetComponent<Rigidbody2D>().simulated = false;
         Destroy(enemy, 2);
+
+        EnemySpawning = FindObjectOfType<EnemySpawner>();       //keep track of amount of enemies in level
+        EnemySpawning.enemiesInLevel--;
+
+        if (EnemySpawning.spawnTime<0 && EnemySpawning.enemiesInLevel <= 0)
+        {
+            EnemySpawning.spawnerDone = true;
+        }
     }
 
 }
