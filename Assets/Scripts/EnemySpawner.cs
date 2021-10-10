@@ -41,10 +41,6 @@ public class EnemySpawner : MonoBehaviour
 
 
 
-
-
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -54,6 +50,11 @@ public class EnemySpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (canSpawn)
+        {
+            spawnTime -= Time.deltaTime;
+            if (spawnTime < 0)
+                canSpawn = false;
+        }
     }
 }
