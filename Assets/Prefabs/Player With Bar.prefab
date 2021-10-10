@@ -110,6 +110,22 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2576285937552233808, guid: 61445c4138d05f6499019f54eba2701f, type: 3}
+      propertyPath: farDistance
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2576285937552233808, guid: 61445c4138d05f6499019f54eba2701f, type: 3}
+      propertyPath: nearDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2576285937552233808, guid: 61445c4138d05f6499019f54eba2701f, type: 3}
+      propertyPath: averageDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2576285937552233808, guid: 61445c4138d05f6499019f54eba2701f, type: 3}
+      propertyPath: animatorDetector
+      value: 
+      objectReference: {fileID: 6907960122050987410}
     - target: {fileID: 4849010393266938646, guid: 61445c4138d05f6499019f54eba2701f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.892
@@ -359,3 +375,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d48d691d5c8d0749bd61be3bad2a8d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &6907960122050987410 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8402369048202357814, guid: 4276125e738e54e458823199a9115b9a, type: 3}
+  m_PrefabInstance: {fileID: 3117958791115532708}
+  m_PrefabAsset: {fileID: 0}
