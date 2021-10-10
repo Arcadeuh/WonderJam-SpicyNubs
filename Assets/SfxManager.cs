@@ -1,4 +1,6 @@
 using UnityEngine.Audio;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SfxManager : MonoBehaviour
@@ -37,23 +39,23 @@ public class SfxManager : MonoBehaviour
 
     public static void PlaySound (string clip)
     {
-        switch (clip)
+       /* switch (clip)
         {
             case "Click":
     //            AudioSrc.PlayOneShot(Click);
                 break;
 
             case "Attack":
-                AudioSrc.PlayOneShot(Attack);
+      //         AudioSrc.PlayOneShot(Attack);
                 break;
             case " GetHit":
        //         AudioSrc.PlayOneShot(GetHit);
                 break;
-            /*case "Jump":
+            case "Jump":
                 AudioSrc.PlayOneShot(Jump);
                 break;
             */
 
-        }
+        
     }
 }
