@@ -100,7 +100,6 @@ public class ConnectionBehavior: MonoBehaviour
 
     void Die()
     {
-
         Destroy(player, 2);
     }
 

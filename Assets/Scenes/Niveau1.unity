@@ -16962,6 +16962,30 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 166825010748953246, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 166825010748953246, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 166825010748953246, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 166825010748953246, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 166825010748953246, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
+    - target: {fileID: 166825010748953246, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 487849173977459926, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -17046,6 +17070,42 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1297211724690387824, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1297211724690387824, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1297211724690387824, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1297211724690387824, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1297211724690387824, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1297211724690387824, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1297211724690387824, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000012636
+      objectReference: {fileID: 0}
+    - target: {fileID: 1297211724690387824, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1297211724690387824, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1602643620205372392, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -17053,6 +17113,10 @@ PrefabInstance:
     - target: {fileID: 1669335411972258524, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1685413391067702968, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2392060647759384746, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
       propertyPath: m_Layer
@@ -17170,6 +17234,30 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 791747127171624791, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
   m_PrefabInstance: {fileID: 526201128}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &526201130 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1685413391067702968, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
+  m_PrefabInstance: {fileID: 526201128}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &526201131
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526201130}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 45ffe0f5cc69fd741a661a96eb97f8eb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &606759951
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -44,7 +44,7 @@ public class SfxManager : MonoBehaviour
                 break;
 
             case "Attack":
-      /         AudioSrc.PlayOneShot(Attack);
+                AudioSrc.PlayOneShot(Attack);
                 break;
             case " GetHit":
        //         AudioSrc.PlayOneShot(GetHit);
