@@ -15,11 +15,13 @@ public class BoxerBehaviour : MonoBehaviour
     private bool isRunningTowardPlayer = false;
     private bool isFlipped = false;
     private GameObject playerGameobject;
+    private Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
     {
         playerGameobject = GameObject.FindGameObjectWithTag("Player");
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -33,7 +35,7 @@ public class BoxerBehaviour : MonoBehaviour
                 walkSpeed *= -1;
                 transform.Find("Body").Rotate(0, 180, 0);
             }
-            transform.position = new Vector2(transform.position.x + Time.deltaTime * walkSpeed, transform.position.y);
+            rb.MovePosition(new Vector2(rb.position.x + walkSpeed * Time.deltaTime, rb.position.y));
         }
 
         else if (isRunningTowardPlayer)
@@ -48,13 +50,13 @@ public class BoxerBehaviour : MonoBehaviour
                 newPos.x - rb.position.x > 0 &&
                 !gameObjectsRightTrigger.Contains("Player"))
             {
-                transform.position = newPos;
+                rb.MovePosition(newPos);
             }
             else if (gameObjectsLeftTrigger.Count != 0 &&
                 newPos.x - rb.position.x < 0 &&
                 !gameObjectsRightTrigger.Contains("Player"))
             {
-                transform.position = newPos;
+                rb.MovePosition(newPos);
             }
 
             Transform bodyTransform = transform.Find("Body");
@@ -64,7 +66,6 @@ public class BoxerBehaviour : MonoBehaviour
             { bodyTransform.eulerAngles = new Vector3(bodyTransform.position.x, 0, bodyTransform.position.z); }
         }
 
-        GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         GetComponent<Rigidbody2D>().angularVelocity = 0;
     }
 

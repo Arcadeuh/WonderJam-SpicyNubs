@@ -57,9 +57,9 @@ public class PlayerCombatScript : MonoBehaviour
         GameObject enemySelected = null;
         foreach(GameObject enemy in enemies)
         {
-            if(enemy.transform.position.sqrMagnitude < lowestDistance)
+            if(Mathf.Abs(enemy.transform.position.magnitude - transform.position.magnitude) < lowestDistance)
             {
-                lowestDistance = enemy.transform.position.sqrMagnitude;
+                lowestDistance = enemy.transform.position.magnitude;
                 enemySelected = enemy;
             }
         }
