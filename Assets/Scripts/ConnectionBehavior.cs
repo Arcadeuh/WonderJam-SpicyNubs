@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ConnectionBehavior: MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class ConnectionBehavior: MonoBehaviour
     public float ConnectionRate = 5f;
     float nextConnectionTime = 0f;
     public ConnectionBar connectionBar;
+    public UnityEvent onDeath;
+
     // Update is called once per frame
     // Start is called before the first frame update
     void Start()
@@ -100,7 +103,7 @@ public class ConnectionBehavior: MonoBehaviour
 
     void Die()
     {
-        Destroy(player, 2);
+        onDeath.Invoke();
     }
 
     
