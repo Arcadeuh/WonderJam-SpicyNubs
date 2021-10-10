@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.Audio;
 using UnityEngine;
 
 public class SfxManager : MonoBehaviour
@@ -11,6 +10,8 @@ public class SfxManager : MonoBehaviour
     public static SfxManager SfxInstance;
 
     static AudioSource AudioSrc;
+
+    public Sound[] sounds;
 
     public void Awake()
     {
@@ -27,9 +28,9 @@ public class SfxManager : MonoBehaviour
     private void Start()
     {
      //   Click = Audio.load<AudioClip> ("click_menu_sound");
-      //  Attack = Audio.GetComponent<AudioClip>("Retor_8-Bitt_Game-Hit_Hurt_Fall_Drop_10");
-      //  GetHit = Audio.GetComponent<AudioClip>("Retro_8-Bit_Game-Hit_Hurt_Fall_Drop_13");
-        // Jump = Audio.GetComponent<AudioClip>("click_menu_sound");
+       // Attack = Audio.FindObjectofType<AudioSource>("Retro_8-Bit_Game-Hit_Hurt_Fall_Drop_10");
+         // GetHit = Audio.GetComponents<AudioSource>("Retro_8-Bit_Game-Hit_Hurt_Fall_Drop_13");
+        // Jump = Audio.GetComponents<AudioSource>("click_menu_sound");
 
         AudioSrc = GetComponent<AudioSource>();
     }
@@ -43,7 +44,7 @@ public class SfxManager : MonoBehaviour
                 break;
 
             case "Attack":
-      //          AudioSrc.PlayOneShot(Attack);
+      /         AudioSrc.PlayOneShot(Attack);
                 break;
             case " GetHit":
        //         AudioSrc.PlayOneShot(GetHit);
