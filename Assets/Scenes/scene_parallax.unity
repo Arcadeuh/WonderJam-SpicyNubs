@@ -134,8 +134,6 @@ GameObject:
   - component: {fileID: 46433473}
   - component: {fileID: 46433475}
   - component: {fileID: 46433474}
-  - component: {fileID: 46433476}
-  - component: {fileID: 46433477}
   - component: {fileID: 46433478}
   m_Layer: 0
   m_Name: Ground
@@ -1120,58 +1118,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!61 &46433476
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 46433472}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 1.5124363, y: -0.5}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.893339, y: 1}
-  m_EdgeRadius: 0
---- !u!61 &46433477
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 46433472}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -2.0124364, y: -2.517723}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.9751272, y: 0.96455383}
-  m_EdgeRadius: 0
 --- !u!19719996 &46433478
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -5872,6 +5818,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &123223195 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1669335411972258524, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
+  m_PrefabInstance: {fileID: 526201128}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &205270017 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2948666025662905514, guid: 005525ee7faaf62478d746f1cd7433d8, type: 3}
@@ -5989,7 +5940,12 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6876023287244780989, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6876023287244780989, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
 --- !u!4 &526201129 stripped
 Transform:
@@ -6022,7 +5978,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2948666025662905514, guid: 005525ee7faaf62478d746f1cd7433d8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.951681
+      value: 11.5
       objectReference: {fileID: 0}
     - target: {fileID: 2948666025662905514, guid: 005525ee7faaf62478d746f1cd7433d8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6074,6 +6030,7 @@ GameObject:
   - component: {fileID: 1171439591}
   - component: {fileID: 1171439593}
   - component: {fileID: 1171439592}
+  - component: {fileID: 1171439594}
   m_Layer: 0
   m_Name: background_sprite_2
   m_TagString: Untagged
@@ -6102,7 +6059,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1171439590}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e370f79c8f216074fa7f37e0d56b3a3c, type: 3}
   m_Name: 
@@ -6160,6 +6117,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1171439594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171439590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b05b7cec256f576499a8769755610832, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 123223195}
+  parallaxEffect: 0.5
 --- !u!1001 &1278501345
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6181,7 +6152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2948666025662905514, guid: 005525ee7faaf62478d746f1cd7433d8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.8391657
+      value: 8.76
       objectReference: {fileID: 0}
     - target: {fileID: 2948666025662905514, guid: 005525ee7faaf62478d746f1cd7433d8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6228,6 +6199,7 @@ GameObject:
   - component: {fileID: 1296847752}
   - component: {fileID: 1296847751}
   - component: {fileID: 1296847753}
+  - component: {fileID: 1296847754}
   m_Layer: 0
   m_Name: background_sprite_1
   m_TagString: Untagged
@@ -6307,13 +6279,27 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1296847750}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e370f79c8f216074fa7f37e0d56b3a3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 526201130}
   subject: {fileID: 526201129}
+--- !u!114 &1296847754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296847750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b05b7cec256f576499a8769755610832, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 123223195}
+  parallaxEffect: 0.3
 --- !u!1001 &1308683865
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6387,6 +6373,7 @@ GameObject:
   - component: {fileID: 1390289140}
   - component: {fileID: 1390289139}
   - component: {fileID: 1390289141}
+  - component: {fileID: 1390289142}
   m_Layer: 0
   m_Name: background_sprite_3
   m_TagString: Untagged
@@ -6466,13 +6453,27 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1390289138}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e370f79c8f216074fa7f37e0d56b3a3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 526201130}
   subject: {fileID: 526201129}
+--- !u!114 &1390289142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390289138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b05b7cec256f576499a8769755610832, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 123223195}
+  parallaxEffect: 0.7
 --- !u!1001 &1657647370
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6579,6 +6580,7 @@ GameObject:
   - component: {fileID: 1844822134}
   - component: {fileID: 1844822133}
   - component: {fileID: 1844822132}
+  - component: {fileID: 1844822135}
   m_Layer: 0
   m_Name: background_sprite_0
   m_TagString: Untagged
@@ -6593,7 +6595,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1844822131}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e370f79c8f216074fa7f37e0d56b3a3c, type: 3}
   m_Name: 
@@ -6665,6 +6667,20 @@ Transform:
   m_Father: {fileID: 239902886}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1844822135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844822131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b05b7cec256f576499a8769755610832, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 123223195}
+  parallaxEffect: 0
 --- !u!4 &1916678092 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2948666025662905514, guid: 005525ee7faaf62478d746f1cd7433d8, type: 3}
