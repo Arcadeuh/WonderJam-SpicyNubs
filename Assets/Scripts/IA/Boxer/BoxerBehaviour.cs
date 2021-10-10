@@ -8,8 +8,8 @@ public class BoxerBehaviour : MonoBehaviour
     public float walkSpeed = 2;
     public float runSpeed = 5;
     [Header("Triggers")]
-    public GameObject triggerRight;
-    public GameObject triggerLeft;
+    public GameObject triggerBottomRight;
+    public GameObject triggerBottomLeft;
 
     private bool isWalking = false;
     private bool isRunningTowardPlayer = false;
@@ -27,8 +27,8 @@ public class BoxerBehaviour : MonoBehaviour
     {
         if (isWalking)
         {
-            if (triggerRight.GetComponent<OnTriggers>().GetGameObjectsInside().Count == 0 ||
-            triggerLeft.GetComponent<OnTriggers>().GetGameObjectsInside().Count == 0)
+            if (triggerBottomRight.GetComponent<OnTriggers>().GetGameObjectsInside().Count == 0 ||
+            triggerBottomLeft.GetComponent<OnTriggers>().GetGameObjectsInside().Count == 0)
             {
                 walkSpeed *= -1;
                 transform.Find("Body").Rotate(0, 180, 0);
@@ -42,8 +42,8 @@ public class BoxerBehaviour : MonoBehaviour
             Vector2 target = new Vector2(playerGameobject.transform.position.x, rb.position.y);
             Vector2 newPos = Vector2.MoveTowards(rb.position, target, runSpeed * Time.deltaTime);
 
-            List<string> gameObjectsRightTrigger = triggerRight.GetComponent<OnTriggers>().GetGameObjectsInside();
-            List<string> gameObjectsLeftTrigger = triggerLeft.GetComponent<OnTriggers>().GetGameObjectsInside();
+            List<string> gameObjectsRightTrigger = triggerBottomRight.GetComponent<OnTriggers>().GetGameObjectsInside();
+            List<string> gameObjectsLeftTrigger = triggerBottomLeft.GetComponent<OnTriggers>().GetGameObjectsInside();
             if (gameObjectsRightTrigger.Count != 0 &&
                 newPos.x - rb.position.x > 0 &&
                 !gameObjectsRightTrigger.Contains("Player"))
@@ -64,10 +64,8 @@ public class BoxerBehaviour : MonoBehaviour
             { bodyTransform.eulerAngles = new Vector3(bodyTransform.position.x, 0, bodyTransform.position.z); }
         }
 
-        else
-        {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
-        }
+        GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+        GetComponent<Rigidbody2D>().angularVelocity = 0;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

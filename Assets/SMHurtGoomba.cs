@@ -2,15 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SMAlertBoxer : StateMachineBehaviour
+public class SMHurtGoomba : StateMachineBehaviour
 {
-
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        BoxCollider2D bc = animator.transform.Find("Body").Find("SightDetection").GetComponent<BoxCollider2D>();
-        bc.offset = new Vector2(-3.0f, bc.offset.y);
-        animator.GetComponent<BoxerBehaviour>().RunTowardPlayer();
+        animator.GetComponent<GoombaBehaviour>().ReverseSpeed();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -20,10 +17,10 @@ public class SMAlertBoxer : StateMachineBehaviour
     //}
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        animator.GetComponent<BoxerBehaviour>().StopRunTowardPlayer();
-    }
+    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    //{
+    //    
+    //}
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
