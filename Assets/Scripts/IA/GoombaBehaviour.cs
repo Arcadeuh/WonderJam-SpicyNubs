@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GoombaBehaviour : MonoBehaviour
 {
-
+    
     public float speed = 10;
     public GameObject triggerRight;
     public GameObject triggerLeft;
