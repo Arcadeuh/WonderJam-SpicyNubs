@@ -25,6 +25,7 @@ public class GoombaBehaviour : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log("THERE");
         ReverseSpeed();
     }
 
