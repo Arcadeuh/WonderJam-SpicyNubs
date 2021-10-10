@@ -38,11 +38,32 @@ public class ConnectionBehavior: MonoBehaviour
         }
         Gizmos.DrawWireSphere(playerPoint.position, ConnectionRange);
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Enemy")
+        {
+            DamageConnection(10);
+            /*
+            if(transform.position.x > collision.transform.position.x)
+            {
+                rb.AddForce(new Vector2(20.0f, 10.0f) * rb.mass, ForceMode2D.Impulse);
+            }
+            else
+            {
+                rb.AddForce(new Vector2(-20.0f, 10.0f) * rb.mass, ForceMode2D.Impulse);
+            }
+            */
+        }
+    }
+    public void DamageConnection(int damage)
+    {
+        currentConnection -= damage;
+        connectionBar.SetConnection(currentConnection);
+    }
     public void Connection(int power)
     {
         Collider2D[] hitantenne = Physics2D.OverlapCircleAll(playerPoint.position, ConnectionRange, antenneLayers);
         int isAntenneHere = hitantenne.Length;
-        //Debug.Log(isAntenneHere);
         if (isAntenneHere == 1)
         {
             if (currentConnection < 100)
@@ -67,8 +88,6 @@ public class ConnectionBehavior: MonoBehaviour
             }
 
         }
-        //Debug.Log(currentConnection);
-        //Debug.Log(isAntenneHere);
         connectionBar.SetConnection(currentConnection);
             if (currentConnection <= 0)
         {
@@ -79,7 +98,7 @@ public class ConnectionBehavior: MonoBehaviour
 
     void Die()
     {
-        Debug.Log("You are dead");
+
         Destroy(player, 2);
     }
 
