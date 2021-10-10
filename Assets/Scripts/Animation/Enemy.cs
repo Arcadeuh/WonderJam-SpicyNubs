@@ -27,6 +27,9 @@ public class Enemy : MonoBehaviour
         {
             Die();
         }
+
+        //play sound when get hit
+        SfxManager.SfxInstance.Audio.PlayOneShot(SfxManager.SfxInstance.GetHit);
     }
 
     void Die()
