@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     //To Jump Movement Only Also In RigidBody2D Remove Gravity For It
 
     public float jumpHeight = 1.0f;
-    public float speed = 1.0f;
+    public float speed;
     public float fallingSpeed = -100.0f;
     public Rigidbody2D rb;
     public CircleCollider2D circular;
@@ -44,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
         
         if (!IsGrounded)
         {
+            Debug.Log("JUMP");
             if (!jumpKeyHeld || Vector2.Dot(rb.velocity, Vector2.up) < -0.5f)
             {
                 rb.AddForce(new Vector2(0, fallingSpeed) * rb.mass);
@@ -56,7 +57,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!enableMovement) { return; }
         MoveX = Input.GetAxisRaw("Horizontal");
-
+        Debug.Log(speed);
+        Debug.Log(MoveX);
         rb.AddForce(new Vector2(MoveX * speed * rb.mass, 0));
         if (rb.velocity.x > 0.01f)
             transform.localScale = Vector3.one;
