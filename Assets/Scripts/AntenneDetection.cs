@@ -42,7 +42,7 @@ public class AntenneDetection : MonoBehaviour
 
         float distance = Mathf.Abs(Vector2.Distance(antennaSelected.transform.position, transform.position));
         //Debug.Log(antennaSelected.name);
-        Debug.Log(distance);
+        //Debug.Log(distance);
 
         if (distance > farDistance) { distanceClue = 0; }
         else if (distance < farDistance && distance > averageDistance) { distanceClue = 1; }
