@@ -22,6 +22,9 @@ public class BoxerBehaviour : MonoBehaviour
     {
         playerGameobject = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
+
+        OnTriggers weaponTrigger = transform.Find("Body").Find("Weapon").GetComponent<OnTriggers>();
+        weaponTrigger.specificTriggerEnter.AddListener( GetHit );
     }
 
     // Update is called once per frame
@@ -67,6 +70,11 @@ public class BoxerBehaviour : MonoBehaviour
         }
 
         GetComponent<Rigidbody2D>().angularVelocity = 0;
+    }
+
+    private void GetHit()
+    {
+        playerGameobject.GetComponent<ConnectionBehavior>().DamageConnection(10);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
