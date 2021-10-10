@@ -15,8 +15,10 @@ public class PauseMenu : MonoBehaviour
             if (GameIsPaused)
             {
                 Resume();
+                //audio.Play();
             }
             else {
+                //audio.Pause();
                 Pause();
             }
         }
