@@ -59,6 +59,7 @@ public class ConnectionBehavior: MonoBehaviour
     {
         currentConnection -= damage;
         connectionBar.SetConnection(currentConnection);
+        GetComponent<PlayerCombatScript>().GetHit();
     }
     public void Connection(int power)
     {
