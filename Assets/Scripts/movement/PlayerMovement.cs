@@ -20,6 +20,9 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     public bool enableMovement= true;
 
+    public GameObject interactIcon; //so player can interact and repair antenna
+    private Vector2 boxSize = new Vector2(0.1f, 1f);
+
 
     //private float MoveY;
     //private bool DoDeath = true;
@@ -33,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
         circular = GetComponent<CircleCollider2D>();
         jumpForce = Mathf.Sqrt(2 * Physics2D.gravity.magnitude * jumpHeight);
 
+        interactIcon.SetActive(false);  //to interact with antenna
     }
 
     // Update is called once per frame
@@ -92,8 +96,12 @@ public class PlayerMovement : MonoBehaviour
         {
             jumpKeyHeld = false;
         }
-        
-        
+
+        //keypress to interact with antenna
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            CheckInteraction();
+        }
     }
 
     /*public void OnTriggerEnter2D(Collider2D ob)
@@ -157,4 +165,34 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log(IsGrounded);
         animator.SetBool("isJumping", true);
     }
+
+    //script in relevance with Antenna
+    public void OpenInteractableIcon()
+    {
+        interactIcon.SetActive(true);
+    }
+
+    public void CloseInteractableIcon()
+    {
+        interactIcon.SetActive(false);
+    }
+
+    public void CheckInteraction()
+    {
+        RaycastHit2D[] CanInteract = Physics2D.BoxCastAll(transform.position, boxSize, 0, Vector2.zero);
+
+        if (CanInteract.Length > 0)
+        {
+            foreach(RaycastHit2D rc in CanInteract)
+            {
+                if (rc.transform.GetComponent<AntenneState>())
+                {
+                    rc.transform.GetComponent<AntenneState>().Interact();
+                    return;
+                }
+            }
+        }
+    }
+
+
 }

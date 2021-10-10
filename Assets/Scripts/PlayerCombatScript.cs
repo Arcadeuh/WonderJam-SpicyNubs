@@ -15,9 +15,13 @@ public class PlayerCombatScript : MonoBehaviour
     public int health = 100;
     private Rigidbody2D rb;
 
+    
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        
     }
 
     // Update is called once per frame
@@ -32,6 +36,8 @@ public class PlayerCombatScript : MonoBehaviour
                 nextAttackTime = Time.time + 1f / attackRate;
         }
         }
+
+      
     }
     void Attack()
     {
@@ -94,4 +100,6 @@ public class PlayerCombatScript : MonoBehaviour
             */
         }
     }
+
+    
 }
