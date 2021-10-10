@@ -41,6 +41,9 @@ public class PlayerCombatScript : MonoBehaviour
         {
             enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
         }
+
+        //play sfx when attacking
+        SfxManager.SfxInstance.Audio.PlayOneShot(SfxManager.SfxInstance.Attack);
     }
 
     public void GetHit()
@@ -62,6 +65,9 @@ public class PlayerCombatScript : MonoBehaviour
         if(enemySelected.transform.position.x > transform.position.x) 
         { rb.AddForce(new Vector2(-20.0f, 15.0f) * rb.mass, ForceMode2D.Impulse); }
         else { rb.AddForce(new Vector2(20.0f, 15.0f) * rb.mass, ForceMode2D.Impulse); }
+
+        //play sound when get hit
+        SfxManager.SfxInstance.Audio.PlayOneShot(SfxManager.SfxInstance.GetHit);
     }
 
     private void OnDrawGizmosSelected()
