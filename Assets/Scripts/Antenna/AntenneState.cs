@@ -19,7 +19,7 @@ public abstract class AntenneState : MonoBehaviour
 
    
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    /*private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
@@ -33,6 +33,6 @@ public abstract class AntenneState : MonoBehaviour
         {
             collision.GetComponent<PlayerMovement>().CloseInteractableIcon();
         }
-    }
+    }*/
 
 }

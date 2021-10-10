@@ -15,9 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Niveau1.unity
     guid: 796b200c2f3d8044bb596bbd811e09f0
   - enabled: 0
-    path: Assets/Scenes/Movements.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
-    path: Assets/Scenes/scene_parallax.unity
-    guid: 67ea873febe983243a38f7103af920cd
+    path: Assets/Scenes/main_menu 1.unity
+    guid: 0a621182827de5346b713ce0340bbe24
   m_configObjects: {}
