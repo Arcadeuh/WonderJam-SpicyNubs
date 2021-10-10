@@ -9,6 +9,13 @@ public class GoombaBehaviour : MonoBehaviour
     public GameObject triggerRight;
     public GameObject triggerLeft;
 
+    private Rigidbody2D rb;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -18,14 +25,13 @@ public class GoombaBehaviour : MonoBehaviour
         {
             ReverseSpeed();
         }
-        GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         GetComponent<Rigidbody2D>().angularVelocity = 0;
-        transform.position = new Vector2(transform.position.x + Time.deltaTime * speed, transform.position.y);
+        rb.MovePosition(new Vector2(rb.position.x + speed * Time.deltaTime, rb.position.y));
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("THERE");
+        Debug.Log(collision.collider.tag);
         ReverseSpeed();
     }
 
