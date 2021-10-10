@@ -11,17 +11,11 @@ public class PlayerCombatScript : MonoBehaviour
     public LayerMask enemyLayers;
     public float attackRate = 0.2f;
     float nextAttackTime = 0f;
-
-    public int health = 100;
     private Rigidbody2D rb;
-
-    
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
-        
     }
 
     // Update is called once per frame
@@ -36,8 +30,6 @@ public class PlayerCombatScript : MonoBehaviour
                 nextAttackTime = Time.time + 1f / attackRate;
         }
         }
-
-      
     }
     void Attack()
     {
@@ -47,16 +39,13 @@ public class PlayerCombatScript : MonoBehaviour
 
         foreach (Collider2D enemy in hitEnemies) 
         {
-            Debug.Log("hit");
             enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
         }
     }
 
-    public void GetHit(int healthLose)
+    public void GetHit()
     {
-        health -= healthLose;
         animator.SetTrigger("Stun");
-        Debug.Log(health);
 
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         float lowestDistance = float.PositiveInfinity;
@@ -83,23 +72,4 @@ public class PlayerCombatScript : MonoBehaviour
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.collider.tag == "Enemy")
-        {
-            GetHit(10);
-            /*
-            if(transform.position.x > collision.transform.position.x)
-            {
-                rb.AddForce(new Vector2(20.0f, 10.0f) * rb.mass, ForceMode2D.Impulse);
-            }
-            else
-            {
-                rb.AddForce(new Vector2(-20.0f, 10.0f) * rb.mass, ForceMode2D.Impulse);
-            }
-            */
-        }
-    }
-
-    
 }
