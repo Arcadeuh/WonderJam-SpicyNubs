@@ -16288,6 +16288,22 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 487849173977459926, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 487849173977459926, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 487849173977459926, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 487849173977459926, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 585188cdc4600544eb408bee749e4b3a, type: 3}
     - target: {fileID: 791747127171624791, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -16372,6 +16388,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 3898863813868639971, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4754071992406753649, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
       propertyPath: onAntennasRepaired.m_PersistentCalls.m_Calls.Array.size
       value: 3
@@ -16455,6 +16475,42 @@ PrefabInstance:
     - target: {fileID: 4754071992406753649, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
       propertyPath: onAntennasRepaired.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6845931609514965217, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6845931609514965217, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6845931609514965217, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6845931609514965217, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6845931609514965217, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6845931609514965217, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6845931609514965217, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000012636
+      objectReference: {fileID: 0}
+    - target: {fileID: 6845931609514965217, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6845931609514965217, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6876023287244780989, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
       propertyPath: m_Enabled
@@ -17666,6 +17722,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3898863813868639971, guid: f672b03529388fe4bbd97e4ed7442201, type: 3}
   m_PrefabInstance: {fileID: 526201128}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1586178114
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586178110}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a826c3a66feadf341841f07ca54c6333, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!61 &1773059297 stripped
 BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 3351339397855019029, guid: 73d88df446f844849b5d836b63b1426d, type: 3}
