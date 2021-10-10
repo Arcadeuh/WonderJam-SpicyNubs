@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2948666025662905514}
   - component: {fileID: 2948666025662905515}
   - component: {fileID: 2948666025662905508}
-  - component: {fileID: 5320534456985686981}
   m_Layer: 8
   m_Name: Antenne
   m_TagString: Antenna
@@ -114,17 +113,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.261776, y: 4.14262}
   m_EdgeRadius: 0
---- !u!114 &5320534456985686981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2948666025662905509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 909a18531f5fecf46bcf5edc0dda1c1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damaged: {fileID: 8002850591695297527, guid: 1e61d20a1c50c52449ba25c6df1a8207, type: 3}
-  repaired: {fileID: 1416812355423292016, guid: b09f7d7779bbc4c4badc5e6db5acdd01, type: 3}
