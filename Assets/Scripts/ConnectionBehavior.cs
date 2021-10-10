@@ -64,7 +64,6 @@ public class ConnectionBehavior: MonoBehaviour
     {
         Collider2D[] hitantenne = Physics2D.OverlapCircleAll(playerPoint.position, ConnectionRange, antenneLayers);
         int isAntenneHere = hitantenne.Length;
-        //Debug.Log(isAntenneHere);
         if (isAntenneHere == 1)
         {
             if (currentConnection < 100)
@@ -89,8 +88,6 @@ public class ConnectionBehavior: MonoBehaviour
             }
 
         }
-        //Debug.Log(currentConnection);
-        //Debug.Log(isAntenneHere);
         connectionBar.SetConnection(currentConnection);
             if (currentConnection <= 0)
         {
@@ -101,7 +98,7 @@ public class ConnectionBehavior: MonoBehaviour
 
     void Die()
     {
-        Debug.Log("You are dead");
+
         Destroy(player, 2);
     }
 

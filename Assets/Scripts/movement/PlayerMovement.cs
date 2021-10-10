@@ -15,7 +15,6 @@ public class PlayerMovement : MonoBehaviour
     private bool IsGrounded = true;
     private float MoveX;
     private float jumpForce;
-    private bool isJumping;
     private bool jumpKeyHeld;
     public Animator animator;
     public bool enableMovement= true;
@@ -43,7 +42,6 @@ public class PlayerMovement : MonoBehaviour
         {
             if (!jumpKeyHeld || Vector2.Dot(rb.velocity, Vector2.up) < -0.5f)
             {
-                //Debug.Log("not held" + jumpKeyHeld);
                 rb.AddForce(new Vector2(0, fallingSpeed) * rb.mass);
             }
 
@@ -54,39 +52,23 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!enableMovement) { return; }
         MoveX = Input.GetAxisRaw("Horizontal");
-        //Remove The Slashes For W & S Movement Only
-        //MoveY = Input.GetAxisRaw("Vertical");
-        //Slash The Below Line Out For W&S Movement Only
 
         rb.AddForce(new Vector2(MoveX * speed * rb.mass, 0));
         if (rb.velocity.x > 0.01f)
             transform.localScale = Vector3.one;
         else if (rb.velocity.x < -0.01f)
             transform.localScale = new Vector3(-1, 1, 1);
-        //animator
-        //Debug.Log(Mathf.Abs(rb.velocity.x));
+
         animator.SetBool("isRunning", MoveX!=0);
-        //Remove The Slashes For W&S Movement Only
 
 
-
-        //rb.velocity = (new Vector2(MoveX * 20, MoveY * 20));
-        //Debug.Log(IsGrounded);
-/*
-           if (Vector2.Dot(rb.velocity, Vector2.up) < 0.1f)
-        {
-            
-            animator.SetBool("isJumping", true);
-        }*/
         if ((Input.GetButtonDown("Jump") && IsGrounded))
         {
             jumpKeyHeld = true;
             animator.SetBool("isJumping", true);
-            //Remove These 2 Lines Below For W&s Movement Only
-            isJumping = true;
+
             rb.AddForce(new Vector2(0, 2)*jumpForce* rb.mass, ForceMode2D.Impulse);
             IsGrounded = false;
-            //Debug.Log(jumpForce);
         }
         else if (Input.GetButtonUp("Jump"))
         {
@@ -96,43 +78,12 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
-    /*public void OnTriggerEnter2D(Collider2D ob)
-    {
-        if (DoDeath)
-        {
-            if (ob.name == "DeathTrigger")
-            {
-                DeathScreen.gameObject.SetActive(true);
-            }
-            if (ob.name == "Finish")
-            {
-                LevelCompleteScreen.gameObject.SetActive(true);
-                DoDeath = false;
-            }
-        }
-    }*/
-    /*public void OnTriggerEnter2D(Collider2D collision)
-    {
-        //Debug.Log(circular.isTrigger);
-        //OnGroundTouched();
-        Debug.Log(collision.gameObject.layer);
-        if (collision.gameObject.layer == 3 )
-        {
-            IsGrounded = true;
-            isJumping = false;
-            animator.SetBool("isJumping", false);
-        }
-    }*/
+
     public void OnTriggerExit2D(Collider2D collision)
     {
-        //Debug.Log(circular.isTrigger);
-        //OnGroundTouched();
-        Debug.Log(collision.gameObject.layer);
-        
          if (collision.gameObject.layer == 3)
         {
             IsGrounded = false;
-            isJumping = false;
             animator.SetBool("isJumping", true);
         }
     }
@@ -145,16 +96,13 @@ public class PlayerMovement : MonoBehaviour
     public void OnGroundTouched()
     {
         IsGrounded = true;
-        isJumping = false;
-        Debug.Log(IsGrounded);
         animator.SetBool("isJumping", false);
         }
 
     public void OnGroundExit()
     {
         IsGrounded = false;
-        isJumping = false;
-        Debug.Log(IsGrounded);
+
         animator.SetBool("isJumping", true);
     }
 }
