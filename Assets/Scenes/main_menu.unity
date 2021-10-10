@@ -357,7 +357,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -80.2, y: -25.3}
+  m_AnchoredPosition: {x: -99.3, y: -48.5}
   m_SizeDelta: {x: 274.84, y: 72.2986}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &461777227
@@ -478,7 +478,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 129.84412
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -720,7 +720,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 82.6, y: 37.5}
+  m_AnchoredPosition: {x: 84.3, y: 58.6}
   m_SizeDelta: {x: 272.4247, y: 58.8291}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &567072146
@@ -804,7 +804,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 96.83655
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -1268,6 +1268,10 @@ PrefabInstance:
     - target: {fileID: 860775257067865194, guid: 6c95c5af0cace0947baf760723f09974, type: 3}
       propertyPath: m_Name
       value: LevelLoader
+      objectReference: {fileID: 0}
+    - target: {fileID: 860775257067865194, guid: 6c95c5af0cace0947baf760723f09974, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c95c5af0cace0947baf760723f09974, type: 3}
@@ -1957,8 +1961,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -82.3, y: 46.8156}
-  m_SizeDelta: {x: 230.01, y: 55.8831}
+  m_AnchoredPosition: {x: -102.9, y: 64.5}
+  m_SizeDelta: {x: 233.6901, y: 56.7295}
   m_Pivot: {x: 0.5, y: 0.5658839}
 --- !u!114 &2022184902
 MonoBehaviour:
@@ -2135,7 +2139,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 148.70557
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -2249,7 +2253,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 81.1, y: -24.9}
+  m_AnchoredPosition: {x: 84.4, y: -48.9}
   m_SizeDelta: {x: 272.4247, y: 58.8291}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2038542909
@@ -2427,7 +2431,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 108.62497
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
