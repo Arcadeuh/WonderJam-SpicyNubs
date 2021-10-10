@@ -14,7 +14,6 @@ public class BrokenAntena : AntenneState
         {
             
             animator.SetTrigger("isRepaired");
-            Debug.Log(true);
             isRepaired = !isRepaired;
 
         }       

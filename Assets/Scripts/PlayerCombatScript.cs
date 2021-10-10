@@ -45,6 +45,7 @@ public class PlayerCombatScript : MonoBehaviour
 
     public void GetHit()
     {
+        Debug.Log("hit");
         animator.SetTrigger("Stun");
 
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
